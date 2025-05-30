@@ -1,0 +1,17 @@
+.general-info {
+    outline: 2px solid red;
+}
+
+.general-element {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.general-element > input {
+    max-width: 200px;
+}
+
+.general-element:nth-of-type(n + 2) {
+    margin-top: 15px;
+}

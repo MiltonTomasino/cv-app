@@ -1,12 +1,14 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import General from './compontents/general.jsx'
+import MainPage from './mainPage.jsx'
 import './index.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App /> */}
-    <General />
+    {/* <General /> */}
+    <MainPage />
   </StrictMode>,
 )
