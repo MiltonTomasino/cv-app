@@ -1,0 +1,20 @@
+.education-info {
+    margin-top: 20px;
+    outline: 2px solid green;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.grid-element {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.grid-element > input {
+    max-width: 200px;
+}
+
+.grid-element:nth-of-type(n + 2) {
+    margin-top: 15px;
+}

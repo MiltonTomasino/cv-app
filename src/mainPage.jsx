@@ -2,6 +2,7 @@ import { useState } from 'react';
 import "./styles/mainPage.css";
 import General from "./compontents/general";
 import Display from './compontents/displayInfo';
+import Education from './compontents/education';
 
 function MainPage() {
 
@@ -11,6 +12,12 @@ function MainPage() {
         phone: ''
     });
 
+    let [education, setEducation] = useState({
+        shool: '',
+        major: '',
+        date: '',
+    })
+
     console.log(generalInfo.name, generalInfo.email, generalInfo.phone);
     
 
@@ -19,12 +26,18 @@ function MainPage() {
 
             <div className="grid-form">
                 <General
-                generalInfo={generalInfo}
                 setGeneralInfo={setGeneralInfo}
+                />
+
+                <Education 
+                setEducation={setEducation}
                 />
             </div>
 
-            <Display generalInfo={generalInfo} />
+            <Display
+            generalInfo={generalInfo}
+            education={education}
+            />
         
          
         </div>

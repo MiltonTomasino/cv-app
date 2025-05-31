@@ -1,5 +1,8 @@
 .display {
     outline: 2px solid blue;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 110px repeat(2, 300px);
 }
 
 .sub-info > h2 {
@@ -11,4 +14,12 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+}
+
+.display-education {
+    outline: 1px solid yellow;
+}
+
+.display-exp {
+    outline: 1px solid orange;
 }
