@@ -4,3 +4,16 @@
 
     column-gap: 50px;
 }
+
+button {
+    border-style: none;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: azure;
+    color: black;
+}

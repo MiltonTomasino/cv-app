@@ -1,3 +1,14 @@
 .display {
     outline: 2px solid blue;
 }
+
+.sub-info > h2 {
+    font-size: 1rem;
+}
+
+.sub-info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

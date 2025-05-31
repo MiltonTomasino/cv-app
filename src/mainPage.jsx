@@ -8,7 +8,7 @@ function MainPage() {
     let [ generalInfo, setGeneralInfo ] = useState({
         name: '',
         email: '',
-        phone: 0
+        phone: ''
     });
 
     console.log(generalInfo.name, generalInfo.email, generalInfo.phone);
