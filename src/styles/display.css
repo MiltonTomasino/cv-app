@@ -2,7 +2,7 @@
     outline: 2px solid blue;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 110px repeat(2, 300px);
+    grid-template-rows: 110px repeat(2, 1fr);
 }
 
 .sub-info > h2 {

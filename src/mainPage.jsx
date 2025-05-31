@@ -3,6 +3,7 @@ import "./styles/mainPage.css";
 import General from "./compontents/general";
 import Display from './compontents/displayInfo';
 import Education from './compontents/education';
+import Experience from './compontents/experience';
 
 function MainPage() {
 
@@ -16,6 +17,14 @@ function MainPage() {
         shool: '',
         major: '',
         date: '',
+    })
+
+    let [experience, setExperience] = useState({
+        compName: '',
+        posTitle: '',
+        responsabilities: '',
+        startDate: '',
+        endDate: ''
     })
 
     console.log(generalInfo.name, generalInfo.email, generalInfo.phone);
@@ -32,11 +41,17 @@ function MainPage() {
                 <Education 
                 setEducation={setEducation}
                 />
+
+                <Experience
+                setExperience={setExperience}
+                />
+
             </div>
 
             <Display
             generalInfo={generalInfo}
             education={education}
+            experience={experience}
             />
         
          

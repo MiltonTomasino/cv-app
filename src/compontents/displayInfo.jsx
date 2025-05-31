@@ -1,6 +1,6 @@
 import "../styles/display.css";
 
-function Display({ generalInfo, education }) {
+function Display({ generalInfo, education, experience }) {
     return (
         <div className="display">
             <div className="display-header">
@@ -20,7 +20,11 @@ function Display({ generalInfo, education }) {
             </div>
 
             <div className="display-exp">
-
+                <h2>{experience.compName}</h2>
+                <h2>{experience.posTitle}</h2>
+                <h2>{experience.responsabilities}</h2>
+                <h2>{experience.startDate}</h2>
+                <h2>{experience.endDate}</h2>
             </div>
         </div>
     )
