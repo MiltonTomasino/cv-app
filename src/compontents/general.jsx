@@ -1,7 +1,7 @@
 import "../styles/general.css"
 import { useState } from 'react';
 
-function General({ setGeneralInfo }) {
+function General({ setGeneralInfo, generalInfo }) {
     const [localInfo, setLocalInfo] = useState({
         name: '',
         email: '',
@@ -25,9 +25,15 @@ function General({ setGeneralInfo }) {
         })
     }
 
+    function edit(e) {
+        e.preventDefault();
+        setLocalInfo(generalInfo);
+    }
+
     return (
         <div className="general-info">
             <form action="">
+                <legend><h1>Personal Information</h1></legend>
                 <div className="general-element">
                     <label htmlFor="user-name">Name:</label>
                     <input type="text" id="user-name" name="name"
@@ -44,7 +50,10 @@ function General({ setGeneralInfo }) {
                     <label htmlFor="phone-num">Phone Number:</label>
                     <input type="number" id="phone-num" name="phone" value={localInfo.phone} onChange={handleChange} />
                 </div>
-                <button onClick={submitInfo}>Submit</button>
+                <div className="form-btns">
+                    <button onClick={submitInfo}>Submit</button>
+                    <button onClick={edit}>Edit</button>
+                </div>
             </form>
         </div>
     )

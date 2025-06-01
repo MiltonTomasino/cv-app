@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import "../styles/experience.css"
 
-function Experience({ setExperience }) {
+function Experience({ setExperience, experience }) {
 
-    let [localInfo, setLocalinfo] = useState({
+    let [localInfo, setLocalInfo] = useState({
         compName: '',
         posTitle: '',
         responsabilities: '',
@@ -14,7 +14,7 @@ function Experience({ setExperience }) {
     function submitInfo(e) {
         e.preventDefault();
         setExperience(localInfo)
-        setLocalinfo({
+        setLocalInfo({
             compName: '',
             posTitle: '',
             responsabilities: '',
@@ -24,17 +24,22 @@ function Experience({ setExperience }) {
     }
 
     function handleChange(e) {
-        setLocalinfo(prevInfo => ({
+        setLocalInfo(prevInfo => ({
             ...prevInfo,
             [e.target.name]: e.target.value
         }))
+    }
+
+    function edit(e) {
+        e.preventDefault();
+        setLocalInfo(experience);
     }
 
     return (
         <div className="exp-container">
 
             <form action="">
-                <legend>Experience</legend>
+                <legend><h1>Work Experience</h1></legend>
                 <div className="grid-element">
                     <label htmlFor="compName">Company Name:</label>
                     <input type="text" name='compName' id='compName' value={localInfo.compName} onChange={handleChange}/>
@@ -56,7 +61,10 @@ function Experience({ setExperience }) {
                     <input type="date" name="endDate" id="endDate" value={localInfo.endDate} onChange={handleChange}/>
                 </div>
 
-                <button onClick={submitInfo}>Submit</button>
+                <div className="form-btns">
+                    <button onClick={submitInfo}>Submit</button>
+                    <button onClick={edit}>Edit</button>
+                </div>
             </form>
 
         </div>

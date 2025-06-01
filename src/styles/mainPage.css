@@ -11,9 +11,41 @@ button {
     padding: 10px 30px;
     border-radius: 10px;
     cursor: pointer;
+
+    min-width: 100px;
 }
 
 button:hover {
-    background-color: azure;
+    background-color: rgb(186, 186, 186);
     color: black;
+}
+
+legend > h1 {
+    font-size: 1.5rem;
+}
+
+.form-btns {
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 800px) {
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .grid-container > .display {
+        min-height: 800px;
+    }
+
+    .display h1 {
+        font-size: 1.2rem;
+    }
+
+    .sub-info {
+        flex-direction: column;
+    }
 }

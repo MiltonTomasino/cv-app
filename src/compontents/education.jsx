@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import "../styles/education.css"
 
-function Education({ setEducation }) {
+function Education({ setEducation, education }) {
     let [localEdu, setLocalEdu] = useState({
         school: '',
         major: '',
@@ -25,11 +25,16 @@ function Education({ setEducation }) {
         })
     }
 
+    function edit(e) {
+        e.preventDefault();
+        setLocalEdu(education);
+    }
+
 
     return (
         <div className="education-info">
             <form action="">
-                <legend>Educational Experience</legend>
+                <legend><h1>Educational Experience</h1></legend>
 
                 <div className="grid-element">
                     <label htmlFor="school">School:</label>
@@ -46,7 +51,10 @@ function Education({ setEducation }) {
                     <input type="date" name="date" id="date" value={localEdu.date} onChange={handleChange}/>
                 </div>
 
-                <button onClick={submitInfo}>Submit</button>
+                <div className="form-btns">
+                    <button onClick={submitInfo}>Submit</button>
+                    <button onClick={edit}>Edit</button>
+                </div>
             </form>
         </div>
     )

@@ -36,14 +36,17 @@ function MainPage() {
             <div className="grid-form">
                 <General
                 setGeneralInfo={setGeneralInfo}
+                generalInfo={generalInfo}
                 />
 
                 <Education 
                 setEducation={setEducation}
+                education={education}
                 />
 
                 <Experience
                 setExperience={setExperience}
+                experience={experience}
                 />
 
             </div>
